@@ -1,0 +1,103 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* General */
+:root {
+  --color-primary: #f79514;
+  --color-text: #4d4d4d;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  color: var(--color-text);
+}
+
+main {
+  width: 90%;
+  min-width: 320px;
+  max-width: 1280px;
+  margin: 3rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+main > img {
+  justify-self: center;
+}
+
+/* Chart */
+.focus-context-line-chart {
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.focus-context-line-chart .zoom-rect {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus-context-line-chart .area-path {
+  color: var(--color-primary);
+  fill-opacity: 0.2;
+}
+
+.focus-context-line-chart .line-path {
+  color: var(--color-primary);
+  stroke-width: 1.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.focus-context-line-chart .layer-g--background .area-path,
+.focus-context-line-chart .layer-g--background .line-path {
+  color: var(--color-text);
+  opacity: 0.25;
+}
+
+.focus-context-line-chart .brush-g .selection,
+.focus-context-line-chart .brush-handle {
+  fill: var(--color-primary);
+  stroke: var(--color-primary);
+  fill-opacity: 0.1;
+}
+
+.focus-context-line-chart .axis-g {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.focus-context-line-chart .annotation-rect {
+  color: var(--color-primary);
+}
